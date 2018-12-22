@@ -25,8 +25,7 @@ class Dataloader(Dataset):
     left_images = []
     right_images = []
     
-    def __init__(self, params, mode, test):
-        self.test = test
+    def __init__(self, params, mode):
         self.params = params
         self.mode = mode
         self.left_images = []
@@ -54,17 +53,12 @@ class Dataloader(Dataset):
             for line in filepath_arr:
                 self.left_images.append(os.path.join('evaluation/ground_truth', line[0])[:-4] + '.png')
                 self.right_images.append(os.path.join('evaluation/ground_truth', line[1])[:-4] + '.png')
-                
-        elif self.test == 'test1':
-            for line in filepath_arr:
-                self.left_images.append(os.path.join('/data/zon5566', self.params.dataset, line[0]))
-                self.right_images.append(os.path.join('/data/zon5566', self.params.dataset, line[1]))
-            
-        elif self.test == 'test2':
+        
+        else:
             for line in filepath_arr:
                 self.left_images.append(line[0])
                 self.right_images.append(line[1])
-         
+
             # load the zip file to the memory
             zippath = glob.glob('{}/{}/*_drive_*_sync.zip'.format(self.params.root_path, self.params.dataset_root))
             for path in zippath:
@@ -78,12 +72,12 @@ class Dataloader(Dataset):
     
     def __getitem__(self, index):
         
-        if self.test == 'test1' or self.params.mode == 'evaluate':
+        if self.params.mode == 'evaluate':
             # It is loaded from disk, but we prefer to load from memory.
             left_img = Image.open(self.left_images[index])
             right_img = Image.open(self.right_images[index])
             
-        elif self.test == 'test2':
+        else:
             left_img_path = self.left_images[index]
             right_img_path = self.right_images[index]
 

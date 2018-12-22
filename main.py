@@ -57,9 +57,9 @@ if __name__ == '__main__':
         
     if params.mode == 'train':
         # loading training data and validation data
-        data_loader_train= DL(params, 'train', sys.argv[1])
+        data_loader_train= DL(params, 'train')
         train_data = DataLoader(data_loader_train, batch_size=params.batch_size, shuffle=True)  
-        data_loader_valid = DL(params, 'valid', sys.argv[1])
+        data_loader_valid = DL(params, 'valid')
         valid_data = DataLoader(data_loader_valid, batch_size=params.batch_size, shuffle=False)
         
         # optimizer
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     elif params.mode == 'test' or params.mode == 'evaluate':
         
         # load testing dataset
-        data_loader_test = DL(params, params.mode, sys.argv[1])
+        data_loader_test = DL(params, params.mode)
         test_data = DataLoader(data_loader_test, batch_size=params.batch_size, shuffle=False)
         
         # load trained model. Here we find the last epoch's checkpoint and load it
