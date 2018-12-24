@@ -40,3 +40,11 @@ kitti_zip_light
 ...
 
 ```
+
+## Training
+To train the model from scratch, just run the command```python3 main.py``` with parameters ```--model_type```, which represents the name of the model. This name will be used as the subdirectory of the checkpoints, images, the tensorboard, and the evaluation things.
+
+## Evaluation
+First, run the command ```python3 main.py --mode=evaluation --model_type=<your model_type>```. The model type name is the one you want to evaluate with.
+
+Numerical errors can be calculated by typing ```python3 evaluate.py <your model type>```. The csv result will be saved in the directory ```evaluation/csv/<your model type>/```, and the predicted images will be in ```evaluation/img/<your model type>/```
