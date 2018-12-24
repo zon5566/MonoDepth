@@ -9,3 +9,6 @@ The code was written in Python 3.5, Pytorch 0.4.1, cuda 9.0<br>
 The model is trained on KITTI dataset (29000 images, organized by paper authors) with 8 batch size, totally 25 hours with 50 epochs, on a single GTX-1080.
 
 ## Dataset -  KITTI
+The source images are compressed together to zip files with same dates and same labels, e.g. ```2011_09_28_drive_0001_sync.zip```, ```2011_09_26_drive_0057_sync.zip```, etc.
+
+These zip files are stored under the directorty ```kitti_zip_light```, which is also the parameter ```dataset_root``` in ```config.py```.
