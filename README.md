@@ -48,3 +48,6 @@ To train the model from scratch, just run the command```python3 main.py``` with 
 First, run the command ```python3 main.py --mode=evaluation --model_type=<your model_type>```. The model type name is the one you want to evaluate with.
 
 Numerical errors can be calculated by typing ```python3 evaluate.py <your model type>```. The csv result will be saved in the directory ```evaluation/csv/<your model type>/```, and the predicted images will be in ```evaluation/img/<your model type>/```
+
+## Loss Visualization
+For each training iteration, the loss is stored in the directory ```runs/<your model type>```. To see the loss trend chart, run the command ```tensorboard --logdir=runs/<your modl type>``` in the root directory. Before running the command, make sure the tensorboardX package is installed.
