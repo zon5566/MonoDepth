@@ -1,5 +1,7 @@
 # MonoDepth
 
+<img src="https://github.com/zon5566/MonoDepth/blob/master/img/input_1.png" height="130"/><img src="https://github.com/zon5566/MonoDepth/blob/master/img/light_1.png" height="130"/>
+
 This is a Pytorch implementation of the work from the paper ***_Unsupervised Monocular Depth Estimation with Left-Right Consistency_*** by Clément Godard, Oisin Mac Aodha, and Gabriel J. Brostow. The original paper and works can be found via the links: <a href='https://arxiv.org/abs/1609.03677'>Paper Link</a>, <a href='https://github.com/mrharicot/monodepth'>GitHub Link</a>.
 
 The code contains the architectures mentioned in the paper (monodepth, resnet), and the training/evaluation. However, I modified some parts of the monodepth architecture to make the training smoother, and also make the visual performance better.
