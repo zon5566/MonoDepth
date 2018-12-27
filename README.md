@@ -53,3 +53,10 @@ Numerical errors can be calculated by typing ```python3 evaluate.py <your model 
 
 ## Loss Visualization
 For each training iteration, the loss is stored in the directory ```runs/<your model type>```. To see the loss trend chart, run the command ```tensorboard --logdir=runs/<your modl type>``` in the root directory. Before running the command, make sure the tensorboardX package is installed.
+
+## More Examples
+The below figures from top to bottom are input images, depth images produced from the model based on the paper, and the ones produced from the model with some modifications.
+
+<img src="https://github.com/zon5566/MonoDepth/blob/master/img/input_trafficlight.png" height="130"/><img src="https://github.com/zon5566/MonoDepth/blob/master/img/input_guide.png" height="130"/>
+<img src="https://github.com/zon5566/MonoDepth/blob/master/img/depth_trafficlight.png" height="130"/><img src="https://github.com/zon5566/MonoDepth/blob/master/img/depth_guide.png" height="130"/>
+<img src="https://github.com/zon5566/MonoDepth/blob/master/img/dp_trafficlight.png" height="130"/><img src="https://github.com/zon5566/MonoDepth/blob/master/img/dp_guide.png" height="130"/>
