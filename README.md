@@ -8,7 +8,7 @@ The code contains the architectures mentioned in the paper (monodepth, resnet), 
 
 ## Requirements
 The code was written in Python 3.5, Pytorch 0.4.1, cuda 9.0<br>
-The model is trained on KITTI dataset (29000 images, organized by paper authors) with 8 batch size, totally 25 hours with 50 epochs, on a single GTX-1080.
+The model is trained on KITTI dataset (29000 images, organized by paper authors) with 8 batch size, totally 25 hours with 50 epochs, on a single GTX-1080 Ti.
 
 ## Files Description
 * ```main.py```: the main function where training or testing starts.
